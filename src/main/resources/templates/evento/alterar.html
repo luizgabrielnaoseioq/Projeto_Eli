@@ -1,11 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Alterar</title>
-</head>
-<body>
-<form th:action="@{/evento/alterar}" method="post">
+<form th:action="@{/evento/criar}" method="post">
+    <h3>Formulário de Criação de Eventos</h3>
 
-</body>
-</html>
+    <label>Nome:</label>
+    <input type="text" th:field="*{nome}">
+
+    <label>Data:</label>
+    <input type="date" th:field="*{data}">
+
+    <label>Descrição</label>
+    <textarea th:field="*{descricao}"></textarea>
+
+    <button type="submit">Salvar</button>
+</form>
